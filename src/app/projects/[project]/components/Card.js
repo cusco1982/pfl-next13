@@ -40,7 +40,7 @@ export default function projectCard({ promise }) {
             <Typography my={2}>Contents/files API: {promise.contents_url}</Typography>
             <Typography my={2}>Updated at: {promise.updated_at}</Typography>
             <Typography my={2}>Clone URL: {promise.clone_url}</Typography>
-            <Typography my={2}>Homepage linked to githubRepo: {promise.homepage}</Typography>
+            <Typography my={2}>projWebsite linked to githubRepo: {promise.homepage}</Typography>
             <Typography my={2}>Topics: {promise.topics}</Typography>
             <Typography my={2}>Visibility: {promise.visibility}</Typography>
 

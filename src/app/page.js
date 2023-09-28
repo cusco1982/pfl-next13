@@ -1,28 +1,31 @@
 // import Link from 'next/link'
 // import styles from './page.module.css'
-import { Typography } from "@mui/material"
+import { Typography } from "@mui/material";
 
-import getUser from './_lib/github/getUser'
+import getUser from './_lib/github/getUser';
 
-
-
-
+import About from './_components/About';
 
 
-import MainFeaturedPost from './_components/MainFeaturedPost'
-import FeaturedPost from './_components/FeaturedPost'
 
-import Main from './_components/Main'
-import Sidebar from './_components/Sidebar'
+
+import MainFeaturedPost from './_components/MainFeaturedPost';
+// import FeaturedPost from './_components/FeaturedPost';
+import FeaturedProject from "./_components/FeaturedProject";
+
+import Main from './_components/Main';
+import Sidebar from './_components/Sidebar';
 
 
 // import Gallery from '../components/Gallery'
-import { Container } from '@mui/material'
+import { Container } from '@mui/material';
 
 import Grid from '@mui/material/Grid';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
+
+import getAllRepos from "./_lib/github/getAllRepos";
 
 
 
@@ -39,26 +42,6 @@ const mainFeaturedPost = {
   imageText: 'main image description',
   linkText: 'Continue reading…',
 };
-const featuredPosts = [
-  {
-    title: 'ecommerce',
-    date: 'Nov 12',
-    description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random?wallpapers',
-    imageLabel: 'Image Text',
-    url: 'https://github.com/cusco1982/ecommerce'
-  },
-  {
-    title: 'constructionTemplate',
-    date: 'Nov 11',
-    description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
-    image: 'https://source.unsplash.com/random?wallpapers',
-    imageLabel: 'Image Text',
-    url: 'https://github.com/cusco1982/constructionTemplate'
-  },
-];
 const sidebar = {
   title: 'About',
   description:
@@ -82,7 +65,7 @@ const sidebar = {
     { name: 'LinkedIn', icon: TwitterIcon, url: 'https://www.linkedin.com/in/julian-ayllon/' },
     { name: 'Discord', icon: TwitterIcon, url: '#' },
     { name: 'LinkTree', icon: TwitterIcon, url: '#' },
-    { name: 'Facebook', icon: FacebookIcon, url:'#' },
+    { name: 'Facebook', icon: FacebookIcon, url: '#' },
   ],
 };
 
@@ -90,6 +73,48 @@ const sidebar = {
 
 
 
+const featuredPosts = [
+  {
+    title: 'ecommerce',
+    date: 'Nov 12',
+    description:
+      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+    image: 'https://source.unsplash.com/random?wallpapers',
+    imageLabel: 'Image Text',
+    url: 'https://github.com/cusco1982/ecommerce'
+  },
+  {
+    title: 'constructionTemplate',
+    date: 'Nov 11',
+    description:
+      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+    image: 'https://source.unsplash.com/random?wallpapers',
+    imageLabel: 'Image Text',
+    url: 'https://github.com/cusco1982/constructionTemplate'
+  },
+  {
+    title: 'constructionTemplate',
+    date: 'Nov 11',
+    description:
+      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+    image: 'https://source.unsplash.com/random?wallpapers',
+    imageLabel: 'Image Text',
+    url: 'https://github.com/cusco1982/constructionTemplate'
+  },
+  {
+    title: 'constructionTemplate',
+    date: 'Nov 11',
+    description:
+      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+    image: 'https://source.unsplash.com/random?wallpapers',
+    imageLabel: 'Image Text',
+    url: 'https://github.com/cusco1982/constructionTemplate'
+  },
+
+
+
+
+];
 
 
 
@@ -97,34 +122,39 @@ const sidebar = {
 
 export default async function Home() {
   const user = await getUser()
+  const projects = await getAllRepos()
+
+  let featuredProjIndex = [28, 16, 79, 61]
+  const featuredProjArr = featuredProjIndex.map(item => projects[item])
+
+
+
 
 
 
 
   return (
     // <main className={styles.main}>
-
-
-    <Container maxWidth="lg" id='mainContent' style={{scrollMarginTop:'60px'}}>
-
+    <Container maxWidth="lg" id='mainContent' style={{ scrollMarginTop: '60px' }}>
 
 
 
+
+
+
+      <About />
 
       <MainFeaturedPost post={mainFeaturedPost} />
 
-
-
-
+      <Typography variant="h2" gutterBottom>Featured Projects</Typography>
+      
 
 
       <Grid container spacing={4}>
-        {featuredPosts.map((post) => (
-          <FeaturedPost key={post.title} post={post} />
+        {featuredProjArr.map((project, index) => (
+          <FeaturedProject key={index} project={project} />
         ))}
       </Grid>
-
-
 
 
 
@@ -140,11 +170,6 @@ export default async function Home() {
           social={sidebar.social}
         />
       </Grid>
-
-
-
-
-
 
 
 
@@ -170,14 +195,7 @@ export default async function Home() {
           <Typography my={2}>created: {user.created_at}</Typography>
           <Typography my={2}>updated at: {user.updated_at}</Typography>
         </> */}
-
-
-
-
     </Container>
-
-
-
     // </main>
   )
 };
