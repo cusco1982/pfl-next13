@@ -33,5 +33,5 @@ export default function MediaCard({ heading, text }) {
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>
-  );
-}
+  )
+};

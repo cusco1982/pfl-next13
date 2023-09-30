@@ -27,6 +27,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 
 import getAllRepos from "./_lib/github/getAllRepos";
 
+import Skills from "./_components/Skills";
 
 
 
@@ -42,37 +43,6 @@ const mainFeaturedPost = {
   imageText: 'main image description',
   linkText: 'Continue reading…',
 };
-const sidebar = {
-  title: 'About',
-  description:
-    'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
-  archives: [
-    { title: 'March 2020', url: '#' },
-    { title: 'February 2020', url: '#' },
-    { title: 'January 2020', url: '#' },
-    { title: 'November 1999', url: '#' },
-    { title: 'October 1999', url: '#' },
-    { title: 'September 1999', url: '#' },
-    { title: 'August 1999', url: '#' },
-    { title: 'July 1999', url: '#' },
-    { title: 'June 1999', url: '#' },
-    { title: 'May 1999', url: '#' },
-    { title: 'April 1999', url: '#' },
-  ],
-  social: [
-    { name: 'GitHub', icon: GitHubIcon, url: 'https://github.com/cusco1982' },
-    { name: 'Twitter', icon: TwitterIcon, url: 'https://twitter.com/StardustSake' },
-    { name: 'LinkedIn', icon: TwitterIcon, url: 'https://www.linkedin.com/in/julian-ayllon/' },
-    { name: 'Discord', icon: TwitterIcon, url: '#' },
-    { name: 'LinkTree', icon: TwitterIcon, url: '#' },
-    { name: 'Facebook', icon: FacebookIcon, url: '#' },
-  ],
-};
-
-
-
-
-
 const featuredPosts = [
   {
     title: 'ecommerce',
@@ -115,9 +85,32 @@ const featuredPosts = [
 
 
 ];
-
-
-
+const sidebar = {
+  title: 'About',
+  description:
+    'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
+  archives: [
+    { title: 'March 2020', url: '#' },
+    { title: 'February 2020', url: '#' },
+    { title: 'January 2020', url: '#' },
+    { title: 'November 1999', url: '#' },
+    { title: 'October 1999', url: '#' },
+    { title: 'September 1999', url: '#' },
+    { title: 'August 1999', url: '#' },
+    { title: 'July 1999', url: '#' },
+    { title: 'June 1999', url: '#' },
+    { title: 'May 1999', url: '#' },
+    { title: 'April 1999', url: '#' },
+  ],
+  social: [
+    { name: 'GitHub', icon: GitHubIcon, url: 'https://github.com/cusco1982' },
+    { name: 'Twitter', icon: TwitterIcon, url: 'https://twitter.com/StardustSake' },
+    { name: 'LinkedIn', icon: TwitterIcon, url: 'https://www.linkedin.com/in/julian-ayllon/' },
+    { name: 'Discord', icon: TwitterIcon, url: '#' },
+    { name: 'LinkTree', icon: TwitterIcon, url: '#' },
+    { name: 'Facebook', icon: FacebookIcon, url: '#' },
+  ],
+};
 
 
 export default async function Home() {
@@ -127,28 +120,15 @@ export default async function Home() {
   let featuredProjIndex = [28, 16, 79, 61]
   const featuredProjArr = featuredProjIndex.map(item => projects[item])
 
-
-
-
-
-
-
   return (
     // <main className={styles.main}>
     <Container maxWidth="lg" id='mainContent' style={{ scrollMarginTop: '60px' }}>
-
-
-
-
-
 
       <About />
 
       <MainFeaturedPost post={mainFeaturedPost} />
 
       <Typography variant="h2" gutterBottom>Featured Projects</Typography>
-      
-
 
       <Grid container spacing={4}>
         {featuredProjArr.map((project, index) => (
@@ -156,8 +136,7 @@ export default async function Home() {
         ))}
       </Grid>
 
-
-
+      <Skills />
 
       <Grid container spacing={5} sx={{ mt: 3 }}>
         <Main title="From the firehose"

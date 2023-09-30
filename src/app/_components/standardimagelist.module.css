@@ -1,0 +1,21 @@
+.imgList:hover .imgTitle{
+    opacity: 1;
+    transition: ease-in-out .5s;
+    height: 38%;
+}
+
+.imgListItem{
+    align-items: center;
+}
+
+.imgTitle{
+    text-align: center;
+    opacity: 0;
+    height: 1px;
+    user-select: none;
+    transition: ease-in-out 3s;
+}
+
+/* .imgTitle * {
+    color: white;
+} */
