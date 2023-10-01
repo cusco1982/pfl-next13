@@ -141,6 +141,11 @@ export default function Skills() {
     // Heroku
     // AWS /ec2 instance
     // API development
+    // Stripe
+    // BCrypt
+    // JWTokens
+    // Redux
+    // Cloudinary
 
     return (
         <Grid container spacing={2} my={10}>

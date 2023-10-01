@@ -7,6 +7,7 @@ import getUser from './_lib/github/getUser';
 import About from './_components/About';
 
 
+import Overlay from './_components/Overlay';
 
 
 import MainFeaturedPost from './_components/MainFeaturedPost';
@@ -29,7 +30,7 @@ import getAllRepos from "./_lib/github/getAllRepos";
 
 import Skills from "./_components/Skills";
 
-
+import Education from './_components/Education';
 
 
 const mainFeaturedPost = {
@@ -122,40 +123,59 @@ export default async function Home() {
 
   return (
     // <main className={styles.main}>
-    <Container maxWidth="lg" id='mainContent' style={{ scrollMarginTop: '60px' }}>
 
-      <About />
+    <>
+      <Overlay />
 
-      <MainFeaturedPost post={mainFeaturedPost} />
+      <Container maxWidth="lg" id='mainContent' style={{ scrollMarginTop: '60px' }}>
 
-      <Typography variant="h2" gutterBottom>Featured Projects</Typography>
+        <About />
 
-      <Grid container spacing={4}>
-        {featuredProjArr.map((project, index) => (
-          <FeaturedProject key={index} project={project} />
-        ))}
-      </Grid>
+        <MainFeaturedPost post={mainFeaturedPost} />
 
-      <Skills />
+        <Typography variant="h2" gutterBottom>Featured Projects</Typography>
 
-      <Grid container spacing={5} sx={{ mt: 3 }}>
-        <Main title="From the firehose"
-        //  posts={posts}
-        />
-        <Sidebar
-          title={sidebar.title}
-          description={sidebar.description}
-          archives={sidebar.archives}
-          social={sidebar.social}
-        />
-      </Grid>
+        <Grid container spacing={4}>
+          {featuredProjArr.map((project, index) => (
+            <FeaturedProject key={index} project={project} />
+          ))}
+        </Grid>
+
+        <Skills />
+
+
+
+        <Education />
 
 
 
 
 
 
-      {/* <>
+
+
+
+
+
+
+        <Grid container spacing={5} sx={{ mt: 3 }}>
+          <Main title="From the firehose"
+          //  posts={posts}
+          />
+          <Sidebar
+            title={sidebar.title}
+            description={sidebar.description}
+            archives={sidebar.archives}
+            social={sidebar.social}
+          />
+        </Grid>
+
+
+
+
+
+
+        {/* <>
           <Typography my={2}>login: {user.login}</Typography>
           <Typography my={2}>avatar URL: {user.avatar_url}</Typography>
           <Typography my={2}>github: {user.html_url}</Typography>
@@ -174,7 +194,9 @@ export default async function Home() {
           <Typography my={2}>created: {user.created_at}</Typography>
           <Typography my={2}>updated at: {user.updated_at}</Typography>
         </> */}
-    </Container>
+      </Container>
+    </>
+
     // </main>
   )
 };

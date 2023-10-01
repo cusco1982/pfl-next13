@@ -54,7 +54,7 @@ export default async function FeaturedProject(props) {
   const language = languageKeys.map((value, i) => {
     return (
       <React.Fragment key={i}>
-        {value}{(i < (languageKeys.length - 1)) ? ',' : ''}
+        {value}{(i < (languageKeys.length - 1)) ? ', ' : ''}
       </React.Fragment>
     )
   })
@@ -87,7 +87,7 @@ export default async function FeaturedProject(props) {
             </Box>
 
 
-            <Typography variant="subtitle1" paragraph>
+            <Typography py={1} variant="subtitle1" paragraph>
               {project.description}
             </Typography>
 
