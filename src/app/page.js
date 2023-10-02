@@ -32,6 +32,8 @@ import Skills from "./_components/Skills";
 
 import Education from './_components/Education';
 
+import ProjectGrid from "./_components/ProjectGrid";
+
 
 const mainFeaturedPost = {
   title: 'Title of a longer featured blog post',
@@ -149,6 +151,7 @@ export default async function Home() {
 
 
 
+        <ProjectGrid/>
 
 
 
@@ -160,7 +163,6 @@ export default async function Home() {
 
         <Grid container spacing={5} sx={{ mt: 3 }}>
           <Main title="From the firehose"
-          //  posts={posts}
           />
           <Sidebar
             title={sidebar.title}

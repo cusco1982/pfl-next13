@@ -29,7 +29,9 @@ export default function Footer(props) {
 
 
     return (
-        <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6 }}>
+        // <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6 }}>
+        <Box component="footer" sx={{ bgcolor: 'red', py: 6 }}>
+
             <Container maxWidth="lg">
 
 
