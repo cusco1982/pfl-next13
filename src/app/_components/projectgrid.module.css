@@ -1,0 +1,7 @@
+.projectImg :hover{
+    cursor: pointer;
+    opacity: .8;
+    transition: all ease-in-out .5s;
+    border: 1px solid rgba(155, 155, 155, 0.862);
+
+}
