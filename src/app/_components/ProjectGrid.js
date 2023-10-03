@@ -32,6 +32,14 @@ export default function ProjectGrid() {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
+    
+    const [openWJ, setOpenWJ] = React.useState(false);
+    const handleOpenWJ = () => setOpenWJ(true);
+    const handleCloseWJ = () => setOpenWJ(false);
+
+    const [openCWE, setOpenCWE] = React.useState(false);
+    const handleOpenCWE = () => setOpenCWE(true);
+    const handleCloseCWE = () => setOpenCWE(false);
 
 
     return (
@@ -99,7 +107,7 @@ export default function ProjectGrid() {
                                     src='/shopit.png'
                                     alt='shopit'
                                     fill={true}
-                                    style={{objectFit:'contain'}}
+                                    // style={{objectFit:'contain'}}
                                 />
                             </Box>
                         </Fade>
@@ -121,12 +129,12 @@ export default function ProjectGrid() {
 
             <Grid container my={6} sx={{ height: '35vh', minHeight: '300px' }}>
                 <Grid className={styles.projectImg} item xs={12} md={6} style={{ position: 'relative' }}>
-                    <Image src='/constructionTemplate.png' alt='constructionTemplate' fill={true} style={{ borderRadius: '5px', paddingRight: '5px' }} onClick={handleOpen}/>
-                    {/* <Modal
+                    <Image src='/constructionTemplate.png' alt='constructionTemplate' fill={true} style={{ borderRadius: '5px', paddingRight: '5px' }} onClick={handleOpenWJ}/>
+                    <Modal
                         aria-labelledby="transition-modal-title"
                         aria-describedby="transition-modal-description"
-                        open={open}
-                        onClose={handleClose}
+                        open={openWJ}
+                        onClose={handleCloseWJ}
                         closeAfterTransition
                         slots={{ backdrop: Backdrop }}
                         slotProps={{
@@ -135,7 +143,7 @@ export default function ProjectGrid() {
                             },
                         }}
                     >
-                        <Fade in={open}>
+                        <Fade in={openWJ}>
                             <Box sx={stylemui}>
                                 <Image
                                     src='/constructionTemplate.png'
@@ -145,7 +153,7 @@ export default function ProjectGrid() {
                                 />
                             </Box>
                         </Fade>
-                    </Modal> */}
+                    </Modal>
                 </Grid>
                 <Grid item xs={12} md={6} sx={{ textAlign: 'center', paddingLeft: '5px', position: 'relative' }}>
                     <Typography style={{ fontSize: '1.7em' }} variant="h5">constructionTemplate</Typography>
@@ -177,12 +185,12 @@ export default function ProjectGrid() {
                     <Button variant="outlined">Check it out!</Button>
                 </Grid>
                 <Grid className={styles.projectImg} item xs={12} md={6} style={{ position: 'relative' }}>
-                    <Image onClick={handleOpen} src='/chrome_weather_extension.png' alt='chrome_weather_extension' fill={true} style={{ borderRadius: '5px', paddingLeft: '5px' }} />
-                    {/* <Modal
+                    <Image onClick={handleOpenCWE} src='/chrome_weather_extension.png' alt='chrome_weather_extension' fill={true} style={{ borderRadius: '5px', paddingLeft: '5px' }} />
+                    <Modal
                         aria-labelledby="transition-modal-title"
                         aria-describedby="transition-modal-description"
-                        open={open}
-                        onClose={handleClose}
+                        open={openCWE}
+                        onClose={handleCloseCWE}
                         closeAfterTransition
                         slots={{ backdrop: Backdrop }}
                         slotProps={{
@@ -191,17 +199,16 @@ export default function ProjectGrid() {
                             },
                         }}
                     >
-                        <Fade in={open}>
+                        <Fade in={openCWE}>
                             <Box sx={stylemui}>
                                 <Image
                                     src='/chrome_weather_extension.png'
                                     alt='chrome_weather_extension'
                                     fill={true}
-                                    style={{objectFit:'contain'}}
                                 />
                             </Box>
                         </Fade>
-                    </Modal> */}
+                    </Modal>
                 </Grid>
             </Grid>
 
