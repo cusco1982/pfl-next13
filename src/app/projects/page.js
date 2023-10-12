@@ -6,10 +6,14 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Grid from "@mui/material/Grid";
 import Stack from "@mui/material/Stack";
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
+import CardActionArea from '@mui/material/CardActionArea';
+import SvgIcon from '@mui/material/SvgIcon';
+import { Box, Divider } from "@mui/material";
+
+
 
 import getAllRepos from "../_lib/github/getAllRepos";
 
@@ -24,6 +28,7 @@ export const metadata = {
 
 
 export default async function allProjectsPage() {
+    const RepoIcon = <SvgIcon fill="green" viewBox="0 0 24 24"><svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" className="octicon octicon-repo mr-1 color-fg-muted"><path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path></svg></SvgIcon>
 
     // users/user/repos?per_page=100
     const projects = await getAllRepos()
@@ -75,23 +80,20 @@ export default async function allProjectsPage() {
     )
 
 
-    // ecommerce store picture
-    // https://images.ctfassets.net/lzny33ho1g45/78B8YPMVGUMAPbgbyyjXYG/4a11f7407a122ccfb72d895ba171a9bd/Ecwid_screenshot?w=1400
-    const randomPic = 'https://images.unsplash.com/photo-1508138221679-760a23a2285b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2FsbHBhcGVyc3x8fHx8fDE2OTU1MzExOTA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080'
 
+    // const randomPic = 'https://images.unsplash.com/photo-1508138221679-760a23a2285b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8d2FsbHBhcGVyc3x8fHx8fDE2OTU1MzExOTA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080'
+
+
+
+    
 
 
 
 
 
     return (
-
-
         <>
             <main>
-
-
-
                 {/* Hero unit */}
                 <Box
                     sx={{
@@ -134,69 +136,154 @@ export default async function allProjectsPage() {
 
 
 
-                <Container sx={{ py: 8 }} maxWidth="md">
-                    {/* End hero unit */}
-                    <Grid container spacing={4}>
+
+
+
+
+
+
+                <Container sx={{ py: 8, bgcolor: 'purple' }} maxWidth="md">
+
+
+
+                    <Grid container spacing={4} style={{ backgroundColor: 'orange' }}>
+
+
+
+
+
+
+
+
                         {featuredProjArr.map((project, index) => (
-                            <Grid item key={index} xs={12} sm={6} md={4}>
-                                <Card
-                                    sx={{
-                                        height: "100%",
-                                        display: "flex",
-                                        flexDirection: "column",
-                                    }}
-                                >
-                                    <CardMedia
-                                        component="div"
-                                        sx={{
-                                            // 16:9
-                                            pt: "56.25%",
-                                        }}
-
-                                        image={randomPic}
-
-                                    />
-                                    <CardContent sx={{ flexGrow: 1 }}>
-                                        <Typography gutterBottom variant="h5" component="h2">
-
-                                            {project.name}
-
-                                        </Typography>
-                                        <Typography>
-
-                                            {project.description}
-
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions>
+                            <Grid key={index} item xs={12} md={6} xl={6} sx={{ bgcolor: "green" }}>
+                                <CardActionArea component="a" href={'#'}>
+                                    <Card sx={{ display: 'flex', bgcolor:'pink' }}>
+                                        <CardContent sx={{ flex: 1 }}>
 
 
 
-                                        <Link href={`projects/${project.name}`}>
 
-                                            <Button size="small">
-                                                View
-                                            </Button>
-                                        </Link>
+                                            <Box sx={{ display: 'flex' }}>
+                                                <Typography component="h3" pt={.5} variant="h5">
+                                                    {RepoIcon}
+                                                </Typography>
+
+                                                <Typography component="h3" variant="h5" mx={1}>
+                                                    {project.name}
+                                                </Typography>
+
+                                                <Typography component="h5" variant="h8" ml={'auto'}>
+                                                    <div style={{ border: '1px solid grey', borderRadius: "25px", paddingLeft: '4px', paddingRight: '4px', fontWeight: "400" }}>
+                                                        {project.visibility === 'public' ? 'Public' : project.visibility}
+
+                                                    </div>
+                                                </Typography>
+                                            </Box>
+
+
+                                            <Typography py={1} variant="subtitle1" paragraph>
+                                                {project.description}
+                                                {/* project description */}
+                                            </Typography>
+
+                                            <Divider />
 
 
 
-                                        <Link href={project.html_url} target="_blank">
-                                            <Button size="small">Github</Button>
-                                        </Link>
+
+
+                                            <Box pt={2} sx={{ display: 'flex' }}>
+                                                <Typography variant="subtitle1" color="text.secondary" style={{ display: 'flex' }}>
+
+
+                                                    Languages: languages
+                                                    {/* {language} */}
+
+
+                                                </Typography>
+
+                                                <Typography variant="subtitle1" color="text.secondary" ml={'auto'}>
+                                                    Last updated: 7
+                                                    {/* {diffDays}  */}
+                                                    days ago
+                                                </Typography>
+
+                                            </Box>
 
 
 
-                                    </CardActions>
-                                </Card>
+
+
+
+
+
+                                        </CardContent>
+                                    </Card>
+                                </CardActionArea>
                             </Grid>
                         ))}
+
+
+
+
+
+
+
+
                     </Grid>
                 </Container>
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                {/* <Container sx={{ py: 8 }} maxWidth="md">
+                    <Grid container spacing={4}>
+                        {featuredProjArr.map((project, index) => (
+                            <Grid item key={index} xs={12} sm={6} md={4}>
+                                <Card sx={{ height: "100%", display: "flex", flexDirection: "column", }}>
+                                    <CardMedia
+                                        component="div"
+                                        sx={{pt: "56.25%",}}
+                                        image={randomPic}
+                                    />
+                                    <CardContent sx={{ flexGrow: 1 }}>
+                                        <Typography gutterBottom variant="h5" component="h2">{project.name}</Typography>
+                                        <Typography>{project.description}</Typography>
+                                    </CardContent>
+                                    <CardActions>
+                                        <Link href={`projects/${project.name}`}>
+                                            <Button size="small">View</Button>
+                                        </Link>
+                                        <Link href={project.html_url} target="_blank">
+                                            <Button size="small">Github</Button>
+                                        </Link>
+                                    </CardActions>
+                                </Card>
+                            </Grid>
+                        ))}
+                    </Grid>
+                </Container> */}
             </main>
         </>
     )

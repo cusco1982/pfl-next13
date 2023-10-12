@@ -36,12 +36,13 @@ import ProjectGrid from "./_components/ProjectGrid";
 
 
 const mainFeaturedPost = {
-  title: 'Title of a longer featured blog post',
+  title: 'ecommerce',
   description:
 
-    "This portfolio was made using nextjs13, materialUI, postgresqlDB, and packages such as Prisma, nodemailer and more!",
-  // "Multiple lines of text that form the lede, informing new readers quickly and efficiently about what's most interesting in this post's contents.",
+    // "This portfolio was made using nextjs13, materialUI, postgresqlDB, and packages such as Prisma, nodemailer and more!",
+    "MERN Full-stack e-commerce site using React, Redux, Nodejs, and MongoDB. Includes user-authentication, Stripe payments, and more!",
 
+  // image: '/shopit.png',
   image: 'https://source.unsplash.com/random?wallpapers',
   imageText: 'main image description',
   linkText: 'Continue reading…',
