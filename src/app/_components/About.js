@@ -11,10 +11,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 
 
-import avatarimg from './avatar.jpeg';
-
-
-
 const featuredPosts = [
     {
         title: 'ecommerce',
@@ -45,7 +41,8 @@ const social = [
 
 const title = 'Hi, Im Julian'
 
-const description = 'My name is Julian Ayllon. I have been coding for 5 years now. A few of my interests are cinemoatography, chess, and painting. I\'ve\ been passionate about programming ever since I watched Hackers(1995) and The Matrix(1999) as a little kid. I believe our world will one day be like the futuristic societies shown in the movies and that the average human will be able to bypass security doors and such. Movies many times have predicted the future and I intend to be at the forefront of whatever technology I use. My dream is to combine both my programming and construction background to create a successfull home cybersecurity business so that every home owner can feel safe at or away from home and have the security that no matter where they are, their family is safe. I\'m\ a big family man and I believe everyone deserves to know their family is safe. It is what I would want and I intend to push myself to the limit and stay on the forefront of technology.'
+// const description = 'My name is Julian Ayllon. I have been coding for 5 years now. A few of my interests are cinemoatography, chess, and painting. I\'ve\ been passionate about programming ever since I watched Hackers(1995) and The Matrix(1999) as a little kid. I believe our world will one day be like the futuristic societies shown in the movies and that the average human will be able to bypass security doors and such. Movies many times have predicted the future and I intend to be at the forefront of whatever technology I use. My dream is to combine both my programming and construction background to create a successfull home cybersecurity business so that every home owner can feel safe at or away from home and have the security that no matter where they are, their family is safe. I\'m\ a big family man and I believe everyone deserves to know their family is safe. It is what I would want and I intend to push myself to the limit and stay on the forefront of technology.'
+const description = 'My name is Julian Ayllon. I have been coding since 2018. I’ve always had a special interest in mathematics from a young age and throughout my 3 years at NJIT. Despite not finishing my degree in Biomedical Engineering, I found success in life by joining the Local 12 Union in New York and soon after sustaining a profitable construction business based in New Jersey. I’ve been passionate about hacking ever since I watched Hackers(1995) and The Matrix(1999) as a little kid. While pursuing my goal to further expand my company’s influence through online marketing, I decided to take on the Rutger’s Coding Bootcamp where my childhood love for programming and mathematics met and I’ve been hooked ever since. A few of my other interests include cinematography, chess, and painting.'
 
 
 
@@ -67,7 +64,7 @@ export default function About() {
                 <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.200' }}>
                     <Avatar
                         alt="Julian Ayllon"
-                        src="https://global-uploads.webflow.com/5fd2ba952bcd68835f2c8254/649625b63d19cea8eaf36d6a_646bbb347534c5fd54e5b5e2_Default_0_8ZwqXr-p-500.png"
+                        src="/avatar.jpeg"
                         sx={{ width: 150, height: 150, marginLeft: 'auto', marginRight: 'auto' }}
                     />
                 </Paper>
@@ -83,10 +80,11 @@ export default function About() {
                         <Link
                             display="block"
                             variant="body1"
-                            href="#"
+                            href={network.url}
                             key={network.name}
                             sx={{ mb: 0.5, py: 2 }}
                             title={network.name}
+                            target="_blank"
                         >
 
                             <network.icon />
@@ -134,7 +132,7 @@ export default function About() {
 
 
 
-                <Typography className='temptitle' variant="h6" gutterBottom>
+                <Typography className='temptitle' variant="h7" gutterBottom>
                     “We shall not cease from exploration <br></br>
                     And the end of all our exploring <br></br>
                     Will be to arrive where we started <br></br>

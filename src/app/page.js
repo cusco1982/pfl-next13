@@ -136,7 +136,7 @@ export default async function Home() {
 
         <MainFeaturedPost post={mainFeaturedPost} />
 
-        <Typography variant="h2" gutterBottom>Featured Projects</Typography>
+        <Typography variant="h2" textAlign={'center'} gutterBottom>Recent Projects</Typography>
 
         <Grid container spacing={4}>
           {featuredProjArr.map((project, index) => (
