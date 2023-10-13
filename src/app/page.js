@@ -30,7 +30,8 @@ import getAllRepos from "./_lib/github/getAllRepos";
 
 import Skills from "./_components/Skills";
 
-import Education from './_components/Education';
+// import Education from './_components/Education';
+import DropdownCard from "./_components/DropdownCard";
 
 import ProjectGrid from "./_components/ProjectGrid";
 
@@ -148,7 +149,8 @@ export default async function Home() {
 
 
 
-        <Education />
+        {/* <Education /> */}
+        <DropdownCard/>
 
 
 
