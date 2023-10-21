@@ -43,8 +43,8 @@ const mainFeaturedPost = {
     // "This portfolio was made using nextjs13, materialUI, postgresqlDB, and packages such as Prisma, nodemailer and more!",
     "MERN Full-stack e-commerce site using React, Redux, Nodejs, and MongoDB. Includes user-authentication, Stripe payments, and more!",
 
-  // image: '/shopit.png',
-  image: 'https://source.unsplash.com/random?wallpapers',
+  image: '/shopit.png',
+  // image: 'https://source.unsplash.com/random?wallpapers',
   imageText: 'main image description',
   linkText: 'Continue reading…',
 };
@@ -137,15 +137,11 @@ export default async function Home() {
 
         <MainFeaturedPost post={mainFeaturedPost} />
 
-        <Typography variant="h2" textAlign={'center'} gutterBottom>Recent Projects</Typography>
 
-        <Grid container spacing={4}>
-          {featuredProjArr.map((project, index) => (
-            <FeaturedProject key={index} project={project} />
-          ))}
-        </Grid>
 
-        <Skills />
+       
+
+
 
 
 
@@ -153,10 +149,19 @@ export default async function Home() {
         <DropdownCard/>
 
 
+        <Skills />
+
 
         <ProjectGrid/>
 
 
+        <Typography variant="h2" textAlign={'center'} gutterBottom>Repositories</Typography>
+
+        <Grid container spacing={4}>
+          {featuredProjArr.map((project, index) => (
+            <FeaturedProject key={index} project={project} />
+          ))}
+        </Grid>
 
 
 

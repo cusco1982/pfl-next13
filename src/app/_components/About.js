@@ -132,12 +132,8 @@ export default function About() {
 
 
 
-                <Typography className='temptitle' variant="h7" gutterBottom>
-                    “We shall not cease from exploration <br></br>
-                    And the end of all our exploring <br></br>
-                    Will be to arrive where we started <br></br>
-                    And know the place for the first time.” <br></br>
-                    —T.S. Eliot, from “Little Gidding"
+                <Typography className='temptitle' variant="h5" gutterBottom>
+                    We shall not cease from exploration.
                 </Typography>
 
 

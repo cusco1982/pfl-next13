@@ -16,7 +16,7 @@ const stylemui = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '60vw',
-    height:'60vh',
+    height: '60vh',
     bgcolor: 'black',
     // bgcolor: 'background.paper',
     boxShadow: 24,
@@ -32,7 +32,7 @@ export default function ProjectGrid() {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
-    
+
     const [openWJ, setOpenWJ] = React.useState(false);
     const handleOpenWJ = () => setOpenWJ(true);
     const handleCloseWJ = () => setOpenWJ(false);
@@ -76,7 +76,8 @@ export default function ProjectGrid() {
 
                 <Grid
                     className={styles.projectImg}
-                    item xs={12} md={6} style={{ position: 'relative', backgroundColor: '' }}>
+                    item xs={12} md={6} style={{ position: 'relative', backgroundColor: '' }}
+                >
                     <Image
                         src='/shopit.png'
                         alt='shopit'
@@ -107,7 +108,7 @@ export default function ProjectGrid() {
                                     src='/shopit.png'
                                     alt='shopit'
                                     fill={true}
-                                    // style={{objectFit:'contain'}}
+                                // style={{objectFit:'contain'}}
                                 />
                             </Box>
                         </Fade>
@@ -129,7 +130,7 @@ export default function ProjectGrid() {
 
             <Grid container my={6} sx={{ height: '35vh', minHeight: '300px' }}>
                 <Grid className={styles.projectImg} item xs={12} md={6} style={{ position: 'relative' }}>
-                    <Image src='/constructionTemplate.png' alt='constructionTemplate' fill={true} style={{ borderRadius: '5px', paddingRight: '5px' }} onClick={handleOpenWJ}/>
+                    <Image src='/constructionTemplate.png' alt='constructionTemplate' fill={true} style={{ borderRadius: '5px', paddingRight: '5px' }} onClick={handleOpenWJ} />
                     <Modal
                         aria-labelledby="transition-modal-title"
                         aria-describedby="transition-modal-description"
@@ -149,7 +150,7 @@ export default function ProjectGrid() {
                                     src='/constructionTemplate.png'
                                     alt='constructionTemplate'
                                     fill={true}
-                                    style={{objectFit:'contain'}}
+                                    style={{ objectFit: 'contain' }}
                                 />
                             </Box>
                         </Fade>
