@@ -34,15 +34,16 @@ function MainFeaturedPost(props) {
   const { post } = props;
 
 
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [openEc, setOpenEc] = React.useState(false);
+  const handleOpenEc = () => setOpenEc(true);
+  const handleCloseEc = () => setOpenEc(false);
 
   return (
 
     <>
 
       <Paper
+      className={styles.paperstyle}
         sx={{
           position: 'relative',
           backgroundColor: 'grey.800',
@@ -52,8 +53,9 @@ function MainFeaturedPost(props) {
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundImage: `url(${post.image})`,
+
         }}
-      // onClick={handleOpen}
+        onClick={handleOpenEc}
 
       >
 
@@ -63,14 +65,8 @@ function MainFeaturedPost(props) {
 
 
         <Box
-          sx={{
-            position: 'absolute',
-            top: 0,
-            bottom: 0,
-            right: 0,
-            left: 0,
-            backgroundColor: 'rgba(0,0,0,.5)',
-          }}
+          className={styles.boxstyle}
+
         />
 
         <Grid container>
@@ -88,15 +84,17 @@ function MainFeaturedPost(props) {
               <Typography variant="h5" color="inherit" paragraph textAlign={'left'}>
                 {post.description}
               </Typography>
-              <Link variant="subtitle1" href="/projects/ecommerce" style={{ color: 'red' }}>
+
+              {/* <Link variant="subtitle1" href="/projects/ecommerce" style={{ color: 'red' }}>
                 {post.linkText}
-              </Link>
+              </Link> */}
+
             </Box>
           </Grid>
 
 
 
-          <Grid onClick={handleOpen} item md={6} className={styles.videoDemo}>
+          <Grid item md={6}>
 
             <Box
               sx={{
@@ -108,7 +106,7 @@ function MainFeaturedPost(props) {
 
               <Typography component="h1" variant="h3" color="inherit" gutterBottom>Play demo</Typography>
 
-              <PlayCircleIcon className={styles.playIcon} />
+              <PlayCircleIcon style={{ fontSize: '4em' }} className={styles.playIcon} />
 
             </Box>
 
@@ -133,8 +131,8 @@ function MainFeaturedPost(props) {
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
-        open={open}
-        onClose={handleClose}
+        open={openEc}
+        onClose={handleCloseEc}
         closeAfterTransition
         slots={{ backdrop: Backdrop }}
         slotProps={{
@@ -143,9 +141,9 @@ function MainFeaturedPost(props) {
           },
         }}
       >
-        <Fade in={open}>
+        <Fade in={openEc}>
           <Box sx={stylemui}>
-            <video autoplay controls style={{ width: '100%', height: 'auto' }}><source src="/ecommerceFF.mp4" type="video/mp4" /></video>
+            <video autoPlay muted controls style={{ width: '100%', height: 'auto' }}><source src="/ecommerceFF.mp4" type="video/mp4" /></video>
           </Box>
         </Fade>
       </Modal>

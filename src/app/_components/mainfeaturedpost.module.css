@@ -1,28 +1,18 @@
-.projectImg :hover {
-    cursor: pointer;
-    opacity: .8;
-    transition: all ease-in-out .5s;
-    border: 1px solid rgba(155, 155, 155, 0.862);
-
+.boxstyle{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    transition: ease-in-out .5s;
 }
 
-.playIcon {
-
-    width: 70px;
-    height: auto;
+.paperstyle:hover{
+    cursor: pointer;
 }
 
-
-/* .playIcon :hover {
-
-    width: 100px;
-    height: auto;
-} */
-
-
-.videoDemo :hover {
-
-    cursor: pointer;
-    color: yellow;
-
+.paperstyle:hover .boxstyle{
+    background-color: rgba(0,0,0,.8);
+    transition: ease-in-out .5s;
 }

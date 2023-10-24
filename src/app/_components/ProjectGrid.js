@@ -202,11 +202,7 @@ export default function ProjectGrid() {
                     >
                         <Fade in={openCWE}>
                             <Box sx={stylemui}>
-                                <Image
-                                    src='/chrome_weather_extension.png'
-                                    alt='chrome_weather_extension'
-                                    fill={true}
-                                />
+                                <video autoPlay muted controls style={{ width: '100%', height: 'auto' }}><source src="/weather-extension-demo.mp4" type="video/mp4" /></video>
                             </Box>
                         </Fade>
                     </Modal>
