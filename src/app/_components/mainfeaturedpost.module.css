@@ -1,18 +1,62 @@
-.boxstyle{
+.boxstyle {
     position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, .5);
     transition: ease-in-out .5s;
 }
 
-.paperstyle:hover{
+.paperstyle:hover {
     cursor: pointer;
 }
 
-.paperstyle:hover .boxstyle{
-    background-color: rgba(0,0,0,.8);
+.paperstyle:hover .boxstyle {
+    background-color: rgba(0, 0, 0, .8);
     transition: ease-in-out .5s;
+}
+
+.paperstyle:hover .boxstyle2 {
+    color: yellow;
+}
+
+.playicon {
+    font-size: 4em !important;
+    transition: ease-in-out .5s;
+}
+
+.paperstyle:hover .playicon {
+    font-size: 4.5em !important;
+    transition: ease-in-out .5s;
+
+
+
+    -webkit-animation: spin .5s linear;
+    -moz-animation: spin .5s linear;
+    animation: spin .5s linear;
+    animation-iteration-count: 1;
+
+
+}
+
+
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }

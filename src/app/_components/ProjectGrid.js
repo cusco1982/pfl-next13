@@ -46,7 +46,14 @@ export default function ProjectGrid() {
         <div style={{ backgroundColor: '' }}>
 
 
-            <Typography py={1} variant='h3' textAlign={'center'} sx={{ bgcolor: '' }}>Featured Projects</Typography>
+            <Typography py={1} variant='h3' textAlign={'center'} sx={{ bgcolor: ''}}>
+                
+                <u>
+                    
+                Featured Projects
+                </u>
+                
+                </Typography>
 
 
 
@@ -164,7 +171,15 @@ export default function ProjectGrid() {
                         <img style={{ objectFit: 'contain', height: '40px', width: 'auto' }} src="https://static-00.iconduck.com/assets.00/next-js-icon-2048x2048-5dqjgeku.png" alt="" />
                     </Box>
                     <Typography style={{ wordSpacing: '.5px', textAlign: 'left', paddingTop: '1.2rem', paddingBottom: '1.2rem' }}>I developed and designed a website using ReactJS and Bootstrap, hosted on Github Pages, to showcase my web presence, story, work experience, education, projects, and achievements my web presence, projects, and achievements in an interactive and visually-appealing format.</Typography>
-                    <Button variant="outlined">Check it out!</Button>
+                    <Button variant="outlined">
+                        
+                        <a style={{textDecoration:'none', color:'inherit'}} href="https://www.wjbestinsulation.com" target='_blank'>
+
+                        Visit live site!
+
+                        </a>
+                        
+                        </Button>
                 </Grid>
             </Grid>
 
@@ -175,6 +190,8 @@ export default function ProjectGrid() {
 
 
             <Grid container my={6} sx={{ height: '35vh', minHeight: '300px' }}>
+
+
                 <Grid item xs={12} md={6} sx={{ textAlign: 'center', paddingRight: '5px', position: 'relative' }}>
                     <Typography style={{ fontSize: '1.7em' }} variant="h5">chrome_weather_extension</Typography>
                     <Box style={{ paddingTop: '1rem', paddingBottom: '.5rem' }}>
@@ -183,9 +200,12 @@ export default function ProjectGrid() {
                         <img style={{ objectFit: 'contain', height: '40px', width: 'auto' }} src="https://static-00.iconduck.com/assets.00/next-js-icon-2048x2048-5dqjgeku.png" alt="" />
                     </Box>
                     <Typography style={{ wordSpacing: '.5px', textAlign: 'left', paddingTop: '1.2rem', paddingBottom: '1.2rem' }}>I developed and designed a website using ReactJS and Bootstrap, hosted on Github Pages, to showcase my web presence, story, work experience, education, projects, and achievements my web presence, projects, and achievements in an interactive and visually-appealing format.</Typography>
-                    <Button variant="outlined">Check it out!</Button>
+                    <Button onClick={handleOpenCWE} variant="outlined">Play demo!</Button>
                 </Grid>
+
+
                 <Grid className={styles.projectImg} item xs={12} md={6} style={{ position: 'relative' }}>
+
                     <Image onClick={handleOpenCWE} src='/chrome_weather_extension.png' alt='chrome_weather_extension' fill={true} style={{ borderRadius: '5px', paddingLeft: '5px' }} />
                     <Modal
                         aria-labelledby="transition-modal-title"
@@ -207,6 +227,9 @@ export default function ProjectGrid() {
                         </Fade>
                     </Modal>
                 </Grid>
+
+
+                
             </Grid>
 
 

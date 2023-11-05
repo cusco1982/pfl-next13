@@ -64,10 +64,7 @@ function MainFeaturedPost(props) {
         {<img style={{ display: 'none' }} src={post.image} alt={post.imageText} />}
 
 
-        <Box
-          className={styles.boxstyle}
-
-        />
+        <Box className={styles.boxstyle}/>
 
         <Grid container>
           <Grid item md={6}>
@@ -102,11 +99,12 @@ function MainFeaturedPost(props) {
                 textAlign: 'center',
               }}
               style={{ top: '25%' }}
+              className={styles.boxstyle2}
             >
 
               <Typography component="h1" variant="h3" color="inherit" gutterBottom>Play demo</Typography>
 
-              <PlayCircleIcon style={{ fontSize: '4em' }} className={styles.playIcon} />
+              <PlayCircleIcon className={styles.playicon} />
 
             </Box>
 

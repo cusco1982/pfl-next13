@@ -9,7 +9,7 @@ import Header from './_components/Header';
 import Footer from './_components/Footer';
 import ThemeRegistry from './_components/ThemeRegistry/ThemeRegistry';
 
-import Overlay from './_components/Overlay';
+// import Overlay from './_components/Overlay';
 
 export const metadata = {
   title: 'Julian Ayllon',
@@ -67,8 +67,7 @@ export default function RootLayout({ children }) {
 
 
           <Footer
-            title="Footer"
-            description="Something here to give the footer a purpose!"
+            title="Get In Touch!"
           />
 
 

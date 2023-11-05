@@ -35,6 +35,7 @@ import DropdownCard from "./_components/DropdownCard";
 
 import ProjectGrid from "./_components/ProjectGrid";
 
+import Languages from './_components/Languages'
 
 const mainFeaturedPost = {
   title: 'ecommerce',
@@ -90,32 +91,32 @@ const featuredPosts = [
 
 
 ];
-const sidebar = {
-  title: 'About',
-  description:
-    'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
-  archives: [
-    { title: 'March 2020', url: '#' },
-    { title: 'February 2020', url: '#' },
-    { title: 'January 2020', url: '#' },
-    { title: 'November 1999', url: '#' },
-    { title: 'October 1999', url: '#' },
-    { title: 'September 1999', url: '#' },
-    { title: 'August 1999', url: '#' },
-    { title: 'July 1999', url: '#' },
-    { title: 'June 1999', url: '#' },
-    { title: 'May 1999', url: '#' },
-    { title: 'April 1999', url: '#' },
-  ],
-  social: [
-    { name: 'GitHub', icon: GitHubIcon, url: 'https://github.com/cusco1982' },
-    { name: 'Twitter', icon: TwitterIcon, url: 'https://twitter.com/StardustSake' },
-    { name: 'LinkedIn', icon: TwitterIcon, url: 'https://www.linkedin.com/in/julian-ayllon/' },
-    { name: 'Discord', icon: TwitterIcon, url: '#' },
-    { name: 'LinkTree', icon: TwitterIcon, url: '#' },
-    { name: 'Facebook', icon: FacebookIcon, url: '#' },
-  ],
-};
+// const sidebar = {
+//   title: 'About',
+//   description:
+//     'Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.',
+//   archives: [
+//     { title: 'March 2020', url: '#' },
+//     { title: 'February 2020', url: '#' },
+//     { title: 'January 2020', url: '#' },
+//     { title: 'November 1999', url: '#' },
+//     { title: 'October 1999', url: '#' },
+//     { title: 'September 1999', url: '#' },
+//     { title: 'August 1999', url: '#' },
+//     { title: 'July 1999', url: '#' },
+//     { title: 'June 1999', url: '#' },
+//     { title: 'May 1999', url: '#' },
+//     { title: 'April 1999', url: '#' },
+//   ],
+//   social: [
+//     { name: 'GitHub', icon: GitHubIcon, url: 'https://github.com/cusco1982' },
+//     { name: 'Twitter', icon: TwitterIcon, url: 'https://twitter.com/StardustSake' },
+//     { name: 'LinkedIn', icon: TwitterIcon, url: 'https://www.linkedin.com/in/julian-ayllon/' },
+//     { name: 'Discord', icon: TwitterIcon, url: '#' },
+//     { name: 'LinkTree', icon: TwitterIcon, url: '#' },
+//     { name: 'Facebook', icon: FacebookIcon, url: '#' },
+//   ],
+// };
 
 
 export default async function Home() {
@@ -139,25 +140,26 @@ export default async function Home() {
 
 
 
-       
-
-
-
-
-
         {/* <Education /> */}
-        <DropdownCard/>
+        <DropdownCard />
 
+
+
+
+
+        {/* <Languages /> */}
 
         <Skills />
 
 
-        <ProjectGrid/>
+        <ProjectGrid />
 
 
-        <Typography variant="h2" textAlign={'center'} gutterBottom>Repositories</Typography>
+        <Typography variant="h2" textAlign={'center'} gutterBottom>
+          <u>Repositories</u>
+        </Typography>
 
-        <Grid container spacing={4}>
+        <Grid container pb={10} spacing={4}>
           {featuredProjArr.map((project, index) => (
             <FeaturedProject key={index} project={project} />
           ))}
@@ -169,16 +171,17 @@ export default async function Home() {
 
 
 
-        <Grid container spacing={5} sx={{ mt: 3 }}>
-          <Main title="From the firehose"
-          />
-          <Sidebar
+
+
+        {/* <Grid container spacing={5} sx={{ mt: 3 }}> */}
+        {/* <Main title="From the firehose"/> */}
+        {/* <Sidebar
             title={sidebar.title}
             description={sidebar.description}
             archives={sidebar.archives}
             social={sidebar.social}
-          />
-        </Grid>
+          /> */}
+        {/* </Grid> */}
 
 
 
