@@ -25,9 +25,18 @@ function Copyright() {
 
     return (
         <Typography pb={2} variant="body1" color="text.secondary" align="center">
-            <Link title='Click here to check out the code for this portfolio!' color="inherit" target='_blank' style={{ textDecoration: 'none', fontSize:'17px' }} href="https://github.com/cusco1982/pfl-next13">
+            {/* <Link title='Click here to check out the code for this portfolio!' color="inherit" target='_blank' style={{ textDecoration: 'none', fontSize: '17px', color:'black' }} href="https://github.com/cusco1982/pfl-next13">
                 Designed & Built by Julian Ayllon
+            </Link> */}
+
+
+
+                Designed & Built by&nbsp;
+            <Link title='Click here to check out my Github!' color="inherit" target='_blank' style={{ textDecoration: 'none', fontSize: '17px', color:'black' }} href="https://github.com/cusco1982">
+                Julian Ayllon
             </Link>
+
+
         </Typography>
     );
 }
@@ -40,14 +49,14 @@ export default function Footer(props) {
 
     return (
         // <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6 }}>
-        <Box component="footer" sx={{ bgcolor: 'red', pt: 6 }}>
+        <Box component="footer" id="footer" sx={{ bgcolor: 'whitesmoke', pt: 6 }}>
 
             <Container maxWidth="lg">
 
 
 
 
-                <Typography variant="h3" gutterBottom align="center" style={{fontWeight:"600"}}>
+                <Typography variant="h3" gutterBottom align="center" style={{ fontWeight: "600" }}>
                     {title}
                 </Typography>
 
@@ -70,11 +79,8 @@ export default function Footer(props) {
                     please feel free to email me at:
                     <br />
 
-<a href="mailto:julian.ayllon28@gmail.com">
+                    <a href="mailto:julian.ayllon28@gmail.com">julian.ayllon28@gmail.com.</a>
 
-                    julian.ayllon28@gmail.com.
-</a>
-                    
 
                 </Typography>
 

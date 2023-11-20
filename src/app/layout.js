@@ -20,20 +20,13 @@ export const metadata = {
 
 
 
-const sections = [
-  { title: 'Home', url: '/' },
-  { title: 'Projects', url: '/projects' },
-  { title: 'Contact', url: '/contact' },
-  { title: 'About', url: '/about' },
-];
-
 
 
 
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" style={{scrollBehavior:'smooth'}}>
       <body>
         <ThemeRegistry>
           {/* <CssBaseline /> */}
@@ -49,7 +42,8 @@ export default function RootLayout({ children }) {
 
 
 
-          <Header title="Julian Ayllon" sections={sections} />
+          {/* <Header title="Julian Ayllon" /> */}
+          <Header/>
 
 
 

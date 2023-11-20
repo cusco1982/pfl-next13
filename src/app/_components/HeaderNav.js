@@ -12,11 +12,11 @@ export default function HeaderNav() {
     const sections = [
         { title: '<Julian />', url: '/' },
         // { title: 'Home', url: '/' },
-        { title: 'Projects', url: '/projects' },
-        // { title: 'Contact', url: '/contact' },
-        { title: 'Resume', url: '/#' },
-        { title: 'About', url: '/about' },
-        { title: 'Skills', url: '#' },
+        { title: 'About', url: '#mainContent' },
+        { title: 'Skills', url: '#skillScroll' },
+        { title: 'Projects', url: '#projectScroll' },
+        { title: 'Contact', url: '#footer' },
+        // { title: 'Resume', url: './JulianAyllonResume' },
     ];
     const title = 'Julian Ayllon'
 
@@ -80,7 +80,7 @@ export default function HeaderNav() {
                 <IconButton>
                     <SearchIcon />
                 </IconButton>
-                <Button variant="outlined" size="small">
+                <Button href='./JulianAyllonResume.pdf' download='Julian Ayllon Resume' variant="outlined" size="small">
                     DOWNLOAD CV
                 </Button>
 
@@ -115,7 +115,14 @@ export default function HeaderNav() {
                     <Grid item xs={4} sx={{ p: 1, flexShrink: 0, textDecoration: 'none', fontSize: '1.2rem', fontWeight: '400', textAlign: 'center' }} style={{ backgroundColor: "" }}>
                         <div>
                             <Button variant="outlined" size="medium" style={{ color: 'black', border: '1px solid black' }}>
-                                DOWNLOAD CV
+
+
+                                <a href='/JulianAyllonResume.pdf' download='Julian Ayllon Resume' target='_blank' style={{ textDecoration: 'none', color:'black' }}>
+                                    DOWNLOAD CV
+                                </a>
+
+
+
                             </Button>
                         </div>
                     </Grid>

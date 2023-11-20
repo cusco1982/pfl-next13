@@ -15,7 +15,8 @@ import HeaderNav from './HeaderNav';
 
 
 
-export default function Header(props) {
+// export default function Header(props) {
+export default function Header() {
 
 
 
@@ -34,7 +35,7 @@ export default function Header(props) {
         zIndex: "1000",
         left: "0",
         right: "0",
-        padding:'0'
+        padding: '0'
 
       }}>
 

@@ -24,8 +24,9 @@ export default function StandardImageList(props) {
                         style={{
                             objectFit: 'contain',
                             height: '100px',
-                            width: '100px',
+                            width: '80px',
                             maxWidth: '100%',
+                            // backgroundColor:'white'
                         }}
                     />
 

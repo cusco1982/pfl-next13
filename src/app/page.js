@@ -38,7 +38,7 @@ import ProjectGrid from "./_components/ProjectGrid";
 import Languages from './_components/Languages'
 
 const mainFeaturedPost = {
-  title: 'ecommerce',
+  title: 'e-commerce',
   description:
 
     // "This portfolio was made using nextjs13, materialUI, postgresqlDB, and packages such as Prisma, nodemailer and more!",
@@ -132,7 +132,7 @@ export default async function Home() {
     <>
       <Overlay />
 
-      <Container maxWidth="lg" id='mainContent' style={{ scrollMarginTop: '60px' }}>
+      <Container maxWidth="lg" id='mainContent' style={{ scrollMarginTop: '60px', backgroundColor:'' }}>
 
         <About />
 
@@ -155,7 +155,8 @@ export default async function Home() {
         <ProjectGrid />
 
 
-        <Typography variant="h2" textAlign={'center'} gutterBottom>
+        <Typography variant="h3" textAlign={'center'} style={{fontWeight:'300', paddingBottom:'40px'}} gutterBottom>
+          {/* <u>Projects</u> */}
           <u>Repositories</u>
         </Typography>
 

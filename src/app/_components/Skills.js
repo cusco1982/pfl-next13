@@ -38,12 +38,12 @@ export default function Skills() {
                     title: 'Python',
                 },
                 {
-                    img: 'https://cdn-icons-png.flaticon.com/512/732/732212.png',
-                    title: 'HTML/CSS',
-                },
-                {
                     img: 'https://static-00.iconduck.com/assets.00/typescript-icon-icon-1024x1024-vh3pfez8.png',
                     title: 'Typescript',
+                },
+                {
+                    img: 'https://cdn-icons-png.flaticon.com/512/5815/5815886.png',
+                    title: 'SQL',
                 },
 
             ]
@@ -55,19 +55,20 @@ export default function Skills() {
 
                 {
                     img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png',
-                    title: 'React',
+                    title: 'ReactJS',
                 },
                 {
                     img: 'https://cdn-icons-png.flaticon.com/512/5968/5968672.png',
                     title: 'Bootstrap',
                 },
                 {
-                    img: 'https://v4.material-ui.com/static/logo.png',
-                    title: 'MaterialUI',
+                    img: 'https://cdn-icons-png.flaticon.com/512/732/732212.png',
+
+                    title: 'HTML/CSS',
                 },
                 {
                     img: 'https://static-00.iconduck.com/assets.00/next-js-icon-2048x2048-5dqjgeku.png',
-                    title: 'Nextjs',
+                    title: 'NextJS',
                 },
 
             ]
@@ -83,7 +84,7 @@ export default function Skills() {
                     title: 'Nodejs',
                 },
                 {
-                    img: 'https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png',
+                    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_qWtC2swHrf52Lusu-UIPXrAUIfb15woyiQ&usqp=CAU',
                     title: 'Express',
                 },
                 {
@@ -125,7 +126,7 @@ export default function Skills() {
         },
     ];
 
-    
+
 
     return (
         <Grid container spacing={2} my={10}>
@@ -142,7 +143,7 @@ export default function Skills() {
 
                     <StandardImageList images={pillar.itemData} />
 
-                    <Typography variant="subtitle1" textAlign={'center'}  paragraph>{pillar.paragraph}</Typography>
+                    <Typography variant="subtitle1" textAlign={'center'} paragraph>{pillar.paragraph}</Typography>
 
                 </Grid>
 

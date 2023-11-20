@@ -46,14 +46,13 @@ export default function ProjectGrid() {
         <div style={{ backgroundColor: '' }}>
 
 
-            <Typography py={1} variant='h3' textAlign={'center'} sx={{ bgcolor: ''}}>
-                
+            <Typography py={1} variant='h3' textAlign={'center'} sx={{ bgcolor: '', scrollMarginTop: '60px' }} id='projectScroll'>
+
                 <u>
-                    
-                Featured Projects
+                    Featured Projects
                 </u>
-                
-                </Typography>
+
+            </Typography>
 
 
 
@@ -172,14 +171,14 @@ export default function ProjectGrid() {
                     </Box>
                     <Typography style={{ wordSpacing: '.5px', textAlign: 'left', paddingTop: '1.2rem', paddingBottom: '1.2rem' }}>I developed and designed a website using ReactJS and Bootstrap, hosted on Github Pages, to showcase my web presence, story, work experience, education, projects, and achievements my web presence, projects, and achievements in an interactive and visually-appealing format.</Typography>
                     <Button variant="outlined">
-                        
-                        <a style={{textDecoration:'none', color:'inherit'}} href="https://www.wjbestinsulation.com" target='_blank'>
 
-                        Visit live site!
+                        <a style={{ textDecoration: 'none', color: 'inherit' }} href="https://www.wjbestinsulation.com" target='_blank'>
+
+                            Visit live site!
 
                         </a>
-                        
-                        </Button>
+
+                    </Button>
                 </Grid>
             </Grid>
 
@@ -229,7 +228,7 @@ export default function ProjectGrid() {
                 </Grid>
 
 
-                
+
             </Grid>
 
 

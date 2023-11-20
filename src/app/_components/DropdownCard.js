@@ -59,19 +59,16 @@ export default function DropdownCard() {
       flexGrow: 1,
 
 
-      '& .education-divider': {
-        transition: 'ease-in-out .5s'
-      },
-
-
-      '&:hover': {
-
-        '& .education-divider': {
-          bgcolor: '#cc0033',
-          transition: 'ease-in-out .5s'
-        },
-
-      },
+      // transition: 'ease-in-out .5s',
+      // '& .education-divider': {
+      //   transition: 'ease-in-out .5s'
+      // },
+      // '&:hover': {
+      //   '& .education-divider': {
+      //     bgcolor: '#cc0033',
+      //     transition: 'ease-in-out .5s'
+      //   },
+      // },
 
 
     }}>
@@ -87,7 +84,19 @@ export default function DropdownCard() {
 
       <Typography component="h2" variant="h2" py={1}>Education</Typography>
 
-      <Card sx={{ bgcolor: '' }}>
+      <Card sx={{
+
+        transition: 'ease-in-out 1s',
+        border: '.5px solid transparent',
+
+        '&:hover': {
+          border: '.5px solid #cc0033',
+          transition: 'ease-in-out 1s'
+        }
+
+
+
+      }}>
 
 
 
