@@ -46,9 +46,9 @@ export default function Overlay() {
         social: [
             { name: 'GitHub', icon: GitHubIcon, url: 'https://github.com/cusco1982' },
             { name: 'LinkedIn', icon: LinkedInIcon, url: 'https://www.linkedin.com/in/julian-ayllon/' },
-            { name: 'Instagram', icon: InstagramIcon, url: '#' },
-            { name: 'Twitter', icon: TwitterIcon, url: 'https://twitter.com/StardustSake' },
-            { name: 'Pinterest', icon: PinterestIcon, url: '#' },
+            // { name: 'Instagram', icon: InstagramIcon, url: '#' },
+            // { name: 'Twitter', icon: TwitterIcon, url: 'https://twitter.com/StardustSake' },
+            // { name: 'Pinterest', icon: PinterestIcon, url: '#' },
             // { name: 'Discord', icon: TwitterIcon, url: '#' },
             // { name: 'LinkTree', icon: TwitterIcon, url: '#' },
             // { name: 'Facebook', icon: FacebookIcon, url: '#' },

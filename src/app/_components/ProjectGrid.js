@@ -64,7 +64,7 @@ export default function ProjectGrid() {
 
                 <Grid item xs={12} md={6} sx={{ bgcolor: '', textAlign: 'center', paddingRight: '5px', position: 'relative' }}>
 
-                    <Typography style={{ backgroundColor: '', fontSize: '1.7em' }} variant="h5">ecommerce</Typography>
+                    <Typography style={{ backgroundColor: '', fontSize: '1.7em' }} variant="h5">E-commerce</Typography>
 
                     <Box style={{ backgroundColor: '', paddingTop: '1rem', paddingBottom: '.5rem' }}>
                         <img style={{ objectFit: 'contain', height: '40px', width: 'auto' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="" />
@@ -163,7 +163,7 @@ export default function ProjectGrid() {
                     </Modal>
                 </Grid>
                 <Grid item xs={12} md={6} sx={{ textAlign: 'center', paddingLeft: '5px', position: 'relative' }}>
-                    <Typography style={{ fontSize: '1.7em' }} variant="h5">constructionTemplate</Typography>
+                    <Typography style={{ fontSize: '1.7em' }} variant="h5">WJ Best Insulation</Typography>
                     <Box style={{ paddingTop: '1rem', paddingBottom: '.5rem' }}>
                         <img style={{ objectFit: 'contain', height: '40px', width: 'auto' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="" />
                         <img style={{ objectFit: 'contain', height: '40px', width: 'auto' }} src="https://v4.material-ui.com/static/logo.png" alt="" />
@@ -192,7 +192,7 @@ export default function ProjectGrid() {
 
 
                 <Grid item xs={12} md={6} sx={{ textAlign: 'center', paddingRight: '5px', position: 'relative' }}>
-                    <Typography style={{ fontSize: '1.7em' }} variant="h5">chrome_weather_extension</Typography>
+                    <Typography style={{ fontSize: '1.7em' }} variant="h5">chrome Weather Extension</Typography>
                     <Box style={{ paddingTop: '1rem', paddingBottom: '.5rem' }}>
                         <img style={{ objectFit: 'contain', height: '40px', width: 'auto' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" alt="" />
                         <img style={{ objectFit: 'contain', height: '40px', width: 'auto' }} src="https://v4.material-ui.com/static/logo.png" alt="" />
