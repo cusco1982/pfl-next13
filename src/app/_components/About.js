@@ -10,7 +10,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 
 
-
 const featuredPosts = [
     {
         title: 'ecommerce',
@@ -49,7 +48,7 @@ export default function About() {
 
 
     return (
-        <div style={{backgroundColor:""}}>
+        <div style={{ backgroundColor: "" }}>
 
 
             <Grid container spacing={5} sx={{ mt: 3, textAlign: 'center' }}>
@@ -64,13 +63,11 @@ export default function About() {
                         />
                     </Paper>
 
+                    <Typography variant="h6" id="skillScroll" gutterBottom sx={{ mt: 3, scrollMarginTop: '70px' }}>Julian Ayllon</Typography>
 
-                    <Typography variant="h6" id="skillScroll" gutterBottom sx={{ mt: 3, scrollMarginTop:'70px' }}>Julian Ayllon</Typography>
                     <Typography variant="h8" gutterBottom sx={{ mt: 3 }}>Fullstack Web Developer</Typography>
 
-
                     <Stack direction="row" spacing={1} justifyContent='center'>
-
                         {social.map((network) => (
                             <Link
                                 display="block"
@@ -86,8 +83,11 @@ export default function About() {
 
                             </Link>
                         ))}
-
                     </Stack>
+
+
+
+
 
 
                 </Grid>
@@ -95,17 +95,17 @@ export default function About() {
 
 
 
-                <Grid item xs={12} md={8} sx={{ textAlign: 'center', bgcolor: '', position:'relative' }}>
+                <Grid item xs={12} md={8} sx={{ textAlign: 'center', bgcolor: '', position: 'relative' }}>
 
                     <Typography className='temptitle' variant="h2" gutterBottom>{title}</Typography>
 
                     <Divider />
-                    <div style={{backgroundColor:''}}>
+                    <div style={{ backgroundColor: '' }}>
                         <h4>I'm a web developer based out of New Jersey, with dedication to continuously learning about new web trends and concepts. With over five years of experience in web development and business, my expertise can help any company modernize with websites and applications that appeal to expanding clientele.</h4>
                     </div>
 
 
-                    <Typography variant="h6" style={{ textAlign: 'center', backgroundColor:'', position:'absolute', bottom:'0', left:'0', right:'0' }} gutterBottom>Here's a list of my most recent skills!</Typography>
+                    <Typography variant="h6" style={{ textAlign: 'center', backgroundColor: '', position: 'absolute', bottom: '0', left: '0', right: '0' }} gutterBottom>Here's a list of my most recent skills!</Typography>
 
 
                 </Grid>
@@ -116,7 +116,7 @@ export default function About() {
 
 
 
-            <Grid container style={{ display: 'flex', backgroundColor: 'whitesmoke' }}>
+            <Grid container style={{ display: 'flex', backgroundColor: 'whitesmoke', marginBottom: '40px', marginTop: '20px' }}>
 
                 <Grid item xs={4} md={2}>
                     <ul>

@@ -74,7 +74,7 @@ export default function ProjectGrid() {
 
                     <Typography style={{ backgroundColor: '', wordSpacing: '.5px', textAlign: 'left', paddingTop: '1.2rem', paddingBottom: '1.2rem' }}>I developed and designed a website using ReactJS and Bootstrap, hosted on Github Pages, to showcase my web presence, story, work experience, education, projects, and achievements my web presence, projects, and achievements in an interactive and visually-appealing format.</Typography>
 
-                    <Button style={{ backgroundColor: '' }} variant="outlined">Check it out!</Button>
+                    <Button href='https://github.com/cusco1982/e-commerce' target='_blank' style={{ backgroundColor: '' }} variant="outlined">Check it out!</Button>
                 </Grid>
 
 
